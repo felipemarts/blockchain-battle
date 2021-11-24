@@ -1,0 +1,16 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Cards.js",
+  "dependencies": {
+    "sha256": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "node createCards.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
