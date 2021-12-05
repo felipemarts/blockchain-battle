@@ -1,0 +1,37 @@
+version: '3'
+services:
+  blockchain-battle-api:
+    container_name: blockchain-battle-api
+    build: './api'
+    env_file: .env
+    volumes:
+      - ./api:/home/node/app
+    depends_on:
+      - blockchain-battle-db
+    networks:
+      - app-connect
+    ports:
+      - '${PORT}:${PORT}'
+
+  blockchain-battle-db:
+    container_name: blockchain-battle-db
+    image: postgres:12.8
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: blockchain-battle
+    networks:
+      - app-connect
+    volumes:
+      - blockchain-battle-db:/data/postgres
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '5433:5432'
+
+volumes:
+    blockchain-battle-db:
+
+networks:
+  app-connect:
+    driver: bridge
