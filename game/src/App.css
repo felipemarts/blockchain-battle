@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.allPage {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  flex-grow: 1;
+}
+
+.rowCampoBatalha {
+  display: flex;
+  justify-content: space-around;
+  height: calc(100% - 10px);
+  padding: 5px;
+}
+
+.card {
+  margin: 5px;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 200px;
+}
