@@ -28,18 +28,20 @@ const sha256 = require('sha256');
 
 module.exports = class Cards {
     id = 0;
-    name = '';
     costType = '';
     cardType = '';
     cost = 0;
     attack = 0;
     defense = 0;
-    description = '';
     bonusTarget = '';
     bonusAmountAttack = 0;
     bonusAmountDefense = 0;
     bonusAmountLife = 0;
     bonusSuportCommunity = false;
+    seed = '';
+    name = '';
+    description = '';
+    imagens = '';
 
     getHash = () => (`${this.costType}-${this.cardType}-${this.cost}-${this.attack}-${this.defense}-${this.bonusTarget}-${this.bonusType}-${this.bonusAmountAttack}-${this.bonusAmountDefense}-${this.bonusAmountLife}`);
 }

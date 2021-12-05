@@ -4,12 +4,14 @@
   "description": "",
   "main": "Cards.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "node-fetch": "^2.6.6",
     "sha256": "^0.2.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "node createCards.js"
+    "create": "node createCards.js",
+    "create-seed": "node createCardSeed.js"
   },
   "author": "",
   "license": "ISC"

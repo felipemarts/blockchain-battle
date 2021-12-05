@@ -170,7 +170,7 @@ const getFrontendCard = () => {
 let allCards = [];
 
 const amountAllCards = 300;
-const amountSpecialCards = 30;
+const amountSpecialCards = 35;
 
 [getBlockchainCard, getSmartcontractCard, getFrontendCard].forEach(createCardFunction => {
     let createdCards = [];
